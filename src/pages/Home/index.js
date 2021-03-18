@@ -1,9 +1,20 @@
 import ChallengeCard from "../../components/molecules/ChallengeCard/";
 import Navbar from "../../components/molecules/Navbar/";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MockChallenge from "../../jsons/MockChallenge.json";
+import {getAllChallenges} from '../../api/fetchData'
 
 const Home = () => {
+  const [challenges, setChallenges] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await getAllChallenges();
+      setChallenges(response)
+    }
+    fetchData();
+  }, [])
+
   return (
     <>
       <Navbar />
@@ -13,9 +24,10 @@ const Home = () => {
           There’s some challegens to improve your skills!
         </p>
         <div className="mt-10 grid grid-cols-3 gap-8	">
-          {MockChallenge.data.map((item) => (
+          {challenges.map((item) => (
             <ChallengeCard
               key={item.id}
+              challengeId={item.id}
               name={item.name}
               difficulty={item.difficulty}
               image={item.image}

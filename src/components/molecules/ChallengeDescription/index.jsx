@@ -1,13 +1,14 @@
 import Button from "../../atoms/Button/";
 import React from "react";
+import { useHistory } from "react-router";
 
 const ChallengeDescription = ({
   name,
   description,
   attempts,
-  resolved,
-  history,
+  resolved
 }) => {
+  let history = useHistory()
   const handleRedirect = (e) => {
     e.preventDefault();
     history.push("/");
