@@ -7,7 +7,6 @@ const getAllChallenges = async () => {
 const getChallenge = async (id) => {
   const response = await fetch(`https://master-challenge.vercel.app/api/challenge/${id}`)
   const json = await response.json()
-  console.log(json)
   return json;
 }
 
