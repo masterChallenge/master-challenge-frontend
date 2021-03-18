@@ -1,5 +1,5 @@
-import ChallengeCard from "../../components/molecules/ChallengeCard/";
-import Navbar from "../../components/molecules/Navbar/";
+import ChallengeCard from "../../components/molecules/ChallengeCard";
+import Navbar from "../../components/molecules/Navbar";
 import React from "react";
 import MockChallenge from "../../jsons/MockChallenge.json";
 
