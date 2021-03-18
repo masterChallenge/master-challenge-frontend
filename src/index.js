@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./routes/App";
 import reportWebVitals from "./reportWebVitals";
+import { ModalContextProvider } from "./context/ModalContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ModalContextProvider>
+      <App />
+    </ModalContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
