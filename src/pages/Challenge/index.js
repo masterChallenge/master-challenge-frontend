@@ -16,7 +16,6 @@ const Challenge = (challengeData) => {
   useEffect(() => {
     async function fetchData() {
       const response = await getChallenge(pid);
-      console.log(response)
       setChallenge(response)
     }
     fetchData();
@@ -24,7 +23,7 @@ const Challenge = (challengeData) => {
 
 
   function handleUserSubmit () {
-    console.log(validate(userInput, challengeData.challenge.validatorRules))
+    console.log(validate(userInput, challenge.challenge.validatorRules))
   }
 
 
