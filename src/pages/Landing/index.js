@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../components/atoms/Button/";
 import Navbar from "../../components/molecules/Navbar/";
-import LandingImage from "../../assets/Landing-image.svg";
+import { ReactComponent as LandingImage } from "../../assets/Landing-image.svg";
 
 const Landing = ({ history }) => {
   const handleRedirect = (e) => {
@@ -25,7 +25,7 @@ const Landing = ({ history }) => {
           </Button>
         </div>
         <span className="mt-20 h-full flex items-center">
-          <img src={LandingImage} alt="Landing" className="h-4/5" />
+          <LandingImage alt="Landing" className="h-4/5" />
         </span>
       </div>
     </>
