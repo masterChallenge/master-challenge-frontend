@@ -18,7 +18,7 @@ const RejectedCard = () => {
         <h3 className="text-2xl font-bold">Keep trying!</h3>
         <p>Practice makes the master</p>
       </span>
-      <Button color="secondary-dark" onClick={handleClick}>
+      <Button color="secondary-dark" onClick={handleClick} type="primary">
         Back to Challenge
       </Button>
       <a href="/" className="mt-4 text-sm font-bold">
