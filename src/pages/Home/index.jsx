@@ -1,19 +1,18 @@
 import ChallengeCard from "../../components/molecules/ChallengeCard/";
 import Navbar from "../../components/molecules/Navbar/";
 import React, { useEffect, useState } from "react";
-import MockChallenge from "../../jsons/MockChallenge.json";
-import {getAllChallenges} from '../../api/fetchData'
+import { getAllChallenges } from "../../api/fetchData";
 
 const Home = () => {
-  const [challenges, setChallenges] = useState([])
+  const [challenges, setChallenges] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const response = await getAllChallenges();
-      setChallenges(response)
+      setChallenges(response);
     }
     fetchData();
-  }, [])
+  }, []);
 
   return (
     <>

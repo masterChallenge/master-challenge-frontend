@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../components/atoms/Button/";
-import Navbar from "../../components/molecules/Navbar/";
+import Button from "../../components/atoms/Button";
+import Navbar from "../../components/molecules/Navbar";
 import { ReactComponent as LandingImage } from "../../assets/Landing-image.svg";
 
 const Landing = ({ history }) => {
