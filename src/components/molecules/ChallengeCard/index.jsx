@@ -2,13 +2,20 @@ import Button from "../../atoms/Button/";
 import DifficultyLabel from "../../atoms/DifficultyLabel/";
 import Icon from "../../atoms/Icon/";
 import Image from "../../atoms/Image/";
-import React, {useState} from "react";
-import { useHistory } from "react-router-dom"
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-const ChallengeCard = ({ name, challengeId, difficulty, image, attempts, estatus }) => {
-  const [challenge] = useState(challengeId)
-  let history = useHistory()
-  
+const ChallengeCard = ({
+  name,
+  challengeId,
+  difficulty,
+  image,
+  attempts,
+  estatus,
+}) => {
+  const [challenge] = useState(challengeId);
+  let history = useHistory();
+
   const handleRedirect = (e) => {
     e.preventDefault();
     history.push(`/challenge/${challenge}`);
@@ -45,7 +52,11 @@ const ChallengeCard = ({ name, challengeId, difficulty, image, attempts, estatus
           >
             Attempts: {attempts}{" "}
           </span>
-          <Button color="secondary-light" onClick={handleRedirect}>
+          <Button
+            color="secondary-light"
+            onClick={handleRedirect}
+            type="tertiary"
+          >
             {estatus === "completed" ? "Retry" : "Go"}
           </Button>
         </div>

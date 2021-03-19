@@ -20,7 +20,7 @@ const Landing = ({ history }) => {
           <p className="mb-20 text-lg  mt-6 text-primary-lightest">
             A platform to improve your CSS Skills
           </p>
-          <Button color="secondary" onClick={handleRedirect}>
+          <Button color="secondary" onClick={handleRedirect} type="primary">
             See challenges
           </Button>
         </div>

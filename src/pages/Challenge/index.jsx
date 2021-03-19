@@ -41,7 +41,7 @@ const Challenge = (challengeData) => {
         <div className="grid grid-cols-2">
           <ChallengeTips />
           <div className="bg-secondary-lighter w-full flex items-center justify-center">
-            <Button color="primary" onClick={handleUserSubmit}>
+            <Button color="primary" onClick={handleUserSubmit} type="secondary">
               Submit
             </Button>
           </div>
