@@ -1,10 +1,6 @@
-import React, { useEffect, useRef } from 'react'
+import React from "react";
 
-export default function Panel ({
-  css, 
-  html
-}){
-
+export default function Panel({ css, html }) {
   function createMarkup() {
     const htmlCSS = `
     <div>
@@ -17,18 +13,26 @@ export default function Panel ({
         </div>
       </div>
     </div>
-    `
+    `;
 
-    return {__html: htmlCSS};
+    return { __html: htmlCSS };
   }
 
   return (
     <>
       <div className="relative bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5">
-        
-        <div style={{position: 'absolute', top: '0px', left: '0px', height: '500px',maxHeight:'100%', width: '100%'}} dangerouslySetInnerHTML={createMarkup()}>
-        </div>
+        <div
+          style={{
+            position: "absolute",
+            top: "0px",
+            left: "0px",
+            height: "500px",
+            maxHeight: "100%",
+            width: "100%",
+          }}
+          dangerouslySetInnerHTML={createMarkup()}
+        ></div>
       </div>
     </>
-  )
+  );
 }
