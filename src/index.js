@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./styles/tailwind.css";
 import App from "./routes/App";
 import reportWebVitals from "./reportWebVitals";
 import { ModalContextProvider } from "./context/ModalContext";
