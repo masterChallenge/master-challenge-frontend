@@ -1,5 +1,6 @@
 import Button from "../../atoms/Button/";
 import { useState } from "react";
+import Icon from "../../atoms/Icon";
 
 const ChallengeTips = ({ hints }) => {
   const [currentHint, setCurrentHint] = useState(null);
@@ -23,7 +24,11 @@ const ChallengeTips = ({ hints }) => {
         )}
 
         <span onClick={handleClick}>
-          <Button children="Show hint" color="warning" type="secondary" />
+          <Icon
+            svg="hint"
+            classes="h-12 w-8 cursor-pointer"
+            title="Show Hint"
+          />
         </span>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import Button from "../../atoms/Button/";
 import React from "react";
 import { useHistory } from "react-router";
+import Icon from "../../atoms/Icon";
 
 const ChallengeDescription = ({ name, description, attempts, resolved }) => {
   let history = useHistory();
@@ -12,12 +13,13 @@ const ChallengeDescription = ({ name, description, attempts, resolved }) => {
     <div className="grid grid-rows-3 p-5 bg-secondary-darker text-light w-full">
       <div className="flex justify-between pb-4 w-full">
         <h1 className="font-bold text-4xl">{name}</h1>
-        <Button
-          children="Exit"
-          color="danger"
-          onClick={handleRedirect}
-          type="secondary"
-        />
+        <span onClick={handleRedirect}>
+          <Icon
+            svg="exit"
+            classes="h-9 w-9 cursor-pointer"
+            title="Return to Dashboard"
+          />
+        </span>
       </div>
       <p className="pb-4">{description}</p>
       <div className="flex justify-between items-end font-bold">

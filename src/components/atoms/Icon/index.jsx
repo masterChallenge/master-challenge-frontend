@@ -1,18 +1,16 @@
-import React from 'react';
+import React from "react";
+import svgs from "./icons";
 
-const Icon = () => {
+const Icon = ({ svg, classes, title }) => {
+  const svgRender = svgs[svg] || svgs.default;
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 56 56'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      className={classes}
+      viewBox={svgRender.viewBox}
+      title={title}
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d='M28 0C12.5614 0 0 12.5614 0 28C0 43.4386 12.5614 56 28 56C43.4386 56 56 43.4386 56 28C56 12.5614 43.4386 0 28 0ZM43.6491 20.6316L25.7544 38.386C24.7018 39.4386 23.0175 39.5088 21.8947 38.4561L12.4211 29.8246C11.2982 28.7719 11.2281 27.0175 12.2105 25.8947C13.2632 24.7719 15.0175 24.7018 16.1404 25.7544L23.6491 32.6316L39.6491 16.6316C40.7719 15.5088 42.5263 15.5088 43.6491 16.6316C44.7719 17.7544 44.7719 19.5088 43.6491 20.6316Z'
-        fill='#181F0A'
-      />
+      {svgRender.svg}
     </svg>
   );
 };
