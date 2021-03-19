@@ -1,7 +1,8 @@
-import Accepted from "../../../assets/Completed.svg";
+import { ReactComponent as Accepted } from "../../../assets/Completed.svg";
 import Button from "../../atoms/Button/";
 
-const AcceptedCard = () => {
+const AcceptedCard = ({ pid, ...props }) => {
+  console.log(parseInt(pid) + 1);
   return (
     <div className="bg-primary flex flex-col items-center text-center rounded-3xl px-20 py-6 shadow-lg text-secondary-darker">
       <Accepted />
