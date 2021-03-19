@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import { Link } from "react-router-dom";
 import Button from "../../atoms/Button/";
 import { ReactComponent as Rejected } from "../../../assets/KeepTrying.svg";
 import ModalContext from "../../../context/ModalContext";
@@ -21,9 +21,9 @@ const RejectedCard = () => {
       <Button color="secondary-dark" onClick={handleClick} type="primary">
         Back to Challenge
       </Button>
-      <a href="/" className="mt-4 text-sm font-bold">
+      <Link to="/home" className="mt-4 text-sm font-bold">
         Return to dashboard
-      </a>
+      </Link>
     </div>
   );
 };

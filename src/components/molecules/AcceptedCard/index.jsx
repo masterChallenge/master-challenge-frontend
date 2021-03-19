@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ReactComponent as Accepted } from "../../../assets/Completed.svg";
 import Button from "../../atoms/Button/";
 
@@ -11,9 +12,9 @@ const AcceptedCard = ({ pid, ...props }) => {
         <p>You're getting better at css</p>
       </span>
       <Button children="Next Challenge" color="secondary-dark" type="primary" />
-      <a href="/" className="mt-4 text-sm font-bold">
+      <Link to="/home" className="mt-4 text-sm font-bold">
         Return to dashboard
-      </a>
+      </Link>
     </div>
   );
 };
