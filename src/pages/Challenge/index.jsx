@@ -3,7 +3,7 @@ import ChallengeDescription from "../../components/molecules/ChallengeDescriptio
 import Input from "../../components/molecules/Input/";
 import ChallengeTips from "../../components/molecules/ChallengeTips/";
 import Button from "../../components/atoms/Button/";
-import ResultModal from "../../components/organisms/ResultModal/ResultModal";
+import ResultModal from "../../components/organisms/ResultModal/";
 import { useParams } from "react-router-dom";
 
 import { validate } from "../../utils/validator";
