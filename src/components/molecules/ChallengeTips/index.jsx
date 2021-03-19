@@ -23,7 +23,7 @@ const ChallengeTips = ({ hints }) => {
         )}
 
         <span onClick={handleClick}>
-          <Button children="Show hint" color="warning" />
+          <Button children="Show hint" color="warning" type="secondary" />
         </span>
       </div>
     </div>
