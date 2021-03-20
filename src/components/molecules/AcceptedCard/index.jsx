@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React from "react";
-
 import { ReactComponent as Accepted } from "../../../assets/Completed.svg";
 import Button from "../../atoms/Button/";
 
