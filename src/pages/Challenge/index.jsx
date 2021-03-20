@@ -4,13 +4,14 @@ import Input from "../../components/molecules/Input/";
 import ChallengeTips from "../../components/molecules/ChallengeTips/";
 import Button from "../../components/atoms/Button/";
 import ResultModal from "../../components/organisms/ResultModal/";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 import { validate } from "../../utils/validator";
 import { getChallenge } from "../../api/fetchData";
 import ModalContext from "../../context/ModalContext";
 
 const Challenge = (challengeData) => {
+  let history = useHistory();
   const [userInput, setUserInput] = useState("Initial Code");
   const [challenge, setChallenge] = useState(null);
   const [response, setResponse] = useState(null);
@@ -20,8 +21,13 @@ const Challenge = (challengeData) => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await getChallenge(pid);
-      setChallenge(response);
+      try {
+        const response = await getChallenge(pid);
+        setChallenge(response);
+      } catch (error) {
+        console.log("El error es: ", error);
+        history.push("/home");
+      }
     }
     fetchData();
   }, []);
