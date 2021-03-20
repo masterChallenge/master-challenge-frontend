@@ -9,10 +9,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Landing} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/challenge/:pid" component={Challenge} />
         <Route component={NotFound} />
+        <Route exact path="/" component={Landing} />
       </Switch>
     </BrowserRouter>
   );

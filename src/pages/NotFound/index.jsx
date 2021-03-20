@@ -1,6 +1,6 @@
-import Navbar from "../../components/molecules/Navbar";
-import { ReactComponent as Not } from "../../assets/404.svg";
 import React from "react";
+import Navbar from "../../components/molecules/Navbar/";
+import { ReactComponent as Not } from "../../assets/404.svg";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {

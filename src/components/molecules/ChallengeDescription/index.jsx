@@ -7,7 +7,7 @@ const ChallengeDescription = ({ name, description, attempts, resolved }) => {
   let history = useHistory();
   const handleRedirect = (e) => {
     e.preventDefault();
-    history.push("/");
+    history.push("/home");
   };
   return (
     <div className="grid grid-rows-3 p-5 bg-secondary-darker text-light w-full">
