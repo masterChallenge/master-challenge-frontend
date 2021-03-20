@@ -1,5 +1,5 @@
-import AcceptedCard from "../../molecules/AcceptedCard/";
-import RejectedCard from "../../molecules/RejectedCard/";
+import AcceptedCard from "../../molecules/AcceptedCard";
+import RejectedCard from "../../molecules/RejectedCard";
 import React from "react";
 
 const ResultModal = ({ isChallengePassed, challengeID, ...props }) => {
