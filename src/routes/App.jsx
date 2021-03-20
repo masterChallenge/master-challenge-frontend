@@ -11,8 +11,8 @@ const App = () => {
       <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/challenge/:pid" component={Challenge} />
-        <Route component={NotFound} />
         <Route exact path="/" component={Landing} />
+        <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
