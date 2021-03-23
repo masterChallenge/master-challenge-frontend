@@ -3,7 +3,7 @@ import { ReactComponent as Logo } from "../../../assets/Logo-Horizontal-BW.svg";
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-primary flex justify-around items-center h-24">
+    <header className="w-full bg-primary flex justify-around items-center h-24 shadow-lg">
       <Link to="/">
         <Logo alt="Logo" />
       </Link>
