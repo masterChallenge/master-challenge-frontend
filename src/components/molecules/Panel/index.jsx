@@ -20,7 +20,7 @@ export default function Panel({ css, html }) {
 
   return (
     <>
-      <div className="relative bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5 overflow-hidden">
+      <div className="relative bg-gray-200 w-1/4 border-2 border-secondary-darker overflow-hidden">
         <div
           style={{
             position: "absolute",
@@ -29,6 +29,8 @@ export default function Panel({ css, html }) {
             height: "500px",
             maxHeight: "100%",
             width: "100%",
+            padding: 2,
+            overflow: "hidden",
           }}
           dangerouslySetInnerHTML={createMarkup()}
         ></div>
