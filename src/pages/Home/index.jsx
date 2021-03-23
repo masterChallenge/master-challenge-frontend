@@ -33,7 +33,7 @@ const Home = () => {
               challengeId={item.challengeId}
               name={item.name}
               difficulty={item.difficulty}
-              image={item.image}
+              image={item.challenge.image}
               attempts={item.attempts}
               estatus={item.estatus}
             />
