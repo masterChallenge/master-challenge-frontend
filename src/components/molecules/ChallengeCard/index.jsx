@@ -27,7 +27,7 @@ const ChallengeCard = ({
   return (
     <Link to={challengeDirection}>
       <div
-        className={`h-44 w-96 flex px-4 py-7 rounded-lg overflow-hidden ${
+        className={`h-44 w-96 flex px-4 py-7 rounded-lg overflow-hidden shadow-lg transition duration-500 ease-in-out hover:bg-secondary-darker transform ${
           estatus === "completed" ? "bg-primary-light" : "bg-secondary-lightest"
         } `}
       >
