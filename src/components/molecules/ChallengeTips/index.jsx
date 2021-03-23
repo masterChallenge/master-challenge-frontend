@@ -16,7 +16,7 @@ const ChallengeTips = ({ hints }) => {
       </div>
       <div className="flex justify-between items-center">
         {currentHint ? (
-          <a href={currentHint.url} className="font-bold">
+          <a href={currentHint.url} className="font-bold" target="_blank">
             Learn more...
           </a>
         ) : (
