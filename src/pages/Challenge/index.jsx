@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useContext } from "react";
-import ChallengeDescription from "../../components/molecules/ChallengeDescription";
-import Input from "../../components/molecules/Input/";
-import ChallengeTips from "../../components/molecules/ChallengeTips/";
-import Button from "../../components/atoms/Button/";
-import ResultModal from "../../components/organisms/ResultModal/";
-import { useHistory, useParams } from "react-router-dom";
+import React, { useEffect, useState, useContext } from 'react';
+import ChallengeDescription from '../../components/molecules/ChallengeDescription';
+import Input from '../../components/molecules/Input/';
+import ChallengeTips from '../../components/molecules/ChallengeTips/';
+import Button from '../../components/atoms/Button/';
+import ResultModal from '../../components/organisms/ResultModal/';
+import { useHistory, useParams } from 'react-router-dom';
 
-import { validate } from "../../utils/validator";
-import { getChallenge } from "../../api/fetchData";
-import ModalContext from "../../context/ModalContext";
+import { validate } from '../../utils/validator';
+import { getChallenge } from '../../api/fetchData';
+import ModalContext from '../../context/ModalContext';
 
 const Challenge = (challengeData) => {
   let history = useHistory();
-  const [userInput, setUserInput] = useState("Initial Code");
+  const [userInput, setUserInput] = useState('Initial Code');
   const [challenge, setChallenge] = useState(null);
   const [response, setResponse] = useState(null);
   const { showModal, setShowModal } = useContext(ModalContext);
@@ -25,8 +25,8 @@ const Challenge = (challengeData) => {
         const response = await getChallenge(pid);
         setChallenge(response);
       } catch (error) {
-        console.log("El error es: ", error);
-        history.push("/home");
+        console.log('El error es: ', error);
+        history.push('/home');
       }
     }
     fetchData();
@@ -41,13 +41,13 @@ const Challenge = (challengeData) => {
     return <div>Loading...</div>;
   } else {
     return (
-      <main className="grid grid-rows-challenge h-screen w-full">
+      <main className='grid grid-rows-challenge h-screen w-full'>
         <ChallengeDescription {...challenge} />
         <Input {...challenge} state={{ userInput, setUserInput }} />
-        <div className="grid grid-cols-2">
+        <div className='grid grid-cols-2'>
           <ChallengeTips />
-          <div className="bg-secondary-lighter w-full flex items-center justify-center">
-            <Button color="primary" onClick={handleUserSubmit} type="secondary">
+          <div className='bg-secondary-lighter w-full flex items-center justify-center'>
+            <Button color='primary' onClick={handleUserSubmit} type='secondary'>
               Submit
             </Button>
           </div>
