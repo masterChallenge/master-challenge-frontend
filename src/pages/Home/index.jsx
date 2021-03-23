@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className='p-10'>
+      <div className='py-10 px-24'>
         <h1 className='text-4xl	font-bold'>🎉Hi Masters!!</h1>
         <p className='text-lg mt-4'>
           Improve your CSS coding skills!. Solve CSS challenges.
