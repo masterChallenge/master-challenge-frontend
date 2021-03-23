@@ -25,8 +25,8 @@ const Home = () => {
         <div className="mt-10 grid grid-cols-3 gap-8	">
           {challenges.map((item) => (
             <ChallengeCard
-              key={item.id}
-              challengeId={item.id}
+              key={item._id}
+              challengeId={item.challengeId}
               name={item.name}
               difficulty={item.difficulty}
               image={item.image}

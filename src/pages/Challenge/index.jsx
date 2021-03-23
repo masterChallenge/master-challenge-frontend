@@ -45,7 +45,7 @@ const Challenge = (challengeData) => {
         <ChallengeDescription {...challenge} />
         <Input {...challenge} state={{ userInput, setUserInput }} />
         <div className="grid grid-cols-2">
-          <ChallengeTips />
+          <ChallengeTips hints={challenge.hints}/>
           <div className="bg-secondary-lighter w-full flex items-center justify-center">
             <Button color="primary" onClick={handleUserSubmit} type="secondary">
               Submit
