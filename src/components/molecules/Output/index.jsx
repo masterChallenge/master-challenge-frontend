@@ -10,8 +10,8 @@ export default function Output({
 }) {
   return (
     <>
-      <Panel css={cssInputTest} html={htmlTest} />
-      <Panel css={outCssTest} html={outHtmlTest} />
+      <Panel css={cssInputTest} html={htmlTest} panelInfo="Your progress"/>
+      <Panel css={outCssTest} html={outHtmlTest} panelInfo="Expected result"/>
     </>
   );
 }
