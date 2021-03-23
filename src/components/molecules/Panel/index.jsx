@@ -20,7 +20,7 @@ export default function Panel({ css, html }) {
 
   return (
     <>
-      <div className="relative bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5">
+      <div className="relative bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5 overflow-hidden">
         <div
           style={{
             position: "absolute",
