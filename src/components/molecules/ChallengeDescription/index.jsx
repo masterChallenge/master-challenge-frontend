@@ -10,7 +10,7 @@ const ChallengeDescription = ({ name, description, attempts, resolved }) => {
     history.push("/home");
   };
   return (
-    <div className="grid grid-rows-3 p-5 bg-secondary-darker text-light w-full">
+    <div className="grid grid-rows-1 p-5 bg-secondary-darker text-light w-full">
       <div className="flex justify-between pb-4 w-full">
         <h1 className="font-bold text-4xl">{name}</h1>
         <span onClick={handleRedirect}>

@@ -1,7 +1,7 @@
-import ChallengeCard from "../../components/molecules/ChallengeCard/";
-import Navbar from "../../components/molecules/Navbar/";
-import React, { useEffect, useState } from "react";
-import { getAllChallenges } from "../../api/fetchData";
+import ChallengeCard from '../../components/molecules/ChallengeCard/';
+import Navbar from '../../components/molecules/Navbar/';
+import React, { useEffect, useState } from 'react';
+import { getAllChallenges } from '../../api/fetchData';
 
 const Home = () => {
   const [challenges, setChallenges] = useState([]);
@@ -17,12 +17,16 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="p-10">
-        <h1 className="text-4xl	font-bold">Good Evening!</h1>
-        <p className="text-lg mt-4">
-          There’s some challegens to improve your skills!
+      <div className='py-10 px-24'>
+        <h1 className='text-4xl	font-bold'>🎉Hi Masters!!</h1>
+        <p className='text-lg mt-4'>
+          Improve your CSS coding skills!. Solve CSS challenges.
         </p>
-        <div className="mt-10 grid grid-cols-3 gap-8	">
+        <p className='text-lg mt-4 font-bold'>
+          How it works, 🚀Choose your challenge, 💻 Code and 🎉Submit your
+          Solution.
+        </p>
+        <div className='mt-10 grid grid-cols-3 gap-8	'>
           {challenges.map((item) => (
             <ChallengeCard
               key={item._id}
