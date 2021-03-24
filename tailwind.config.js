@@ -18,6 +18,7 @@ module.exports = {
         "secondary-darker": "#0C0A2D",
         warning: "#FF8800",
         danger: "#CC0000",
+        "tip-bulb": "#EED91F",
         dark: "#191919",
         light: "#F5F6FA",
         "primary-darker": "#2F3C15",
