@@ -44,7 +44,11 @@ const ChallengeCard = ({
               {name}
             </h2>
             {estatus === "completed" && (
-              <Icon svg="check" classes="h-4 w-4" title="Completed" />
+              <Icon
+                svg="check"
+                classes="h-4 w-4 text-primary-darkest"
+                title="Completed"
+              />
             )}
           </div>
           <DifficultyLabel difficulty={difficulty} className="w-11">

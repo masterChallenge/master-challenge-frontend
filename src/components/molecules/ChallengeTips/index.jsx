@@ -12,7 +12,9 @@ const ChallengeTips = ({ hints }) => {
     <div className="bg-secondary-dark grid grid-rows-3 w-full text-light p-5 float-right">
       <h1 className="font-bold text-2xl pb-2">Hints</h1>
       <div>
-        {currentHint ? currentHint.description : "Stucked? Try getting a hint!"}
+        {currentHint
+          ? currentHint.description
+          : "If you have problems, the bulb will show you the way. Click it"}
       </div>
       <div className="flex justify-between items-center">
         {currentHint ? (
@@ -26,7 +28,7 @@ const ChallengeTips = ({ hints }) => {
         <span onClick={handleClick}>
           <Icon
             svg="hint"
-            classes="h-12 w-8 cursor-pointer"
+            classes="h-12 w-8 cursor-pointer text-light hover:text-tip-bulb"
             title="Show Hint"
           />
         </span>

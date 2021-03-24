@@ -16,7 +16,7 @@ const ChallengeDescription = ({ name, description, attempts, resolved }) => {
         <span onClick={handleRedirect}>
           <Icon
             svg="exit"
-            classes="h-9 w-9 cursor-pointer"
+            classes="h-9 w-9 cursor-pointer text-light hover:text-danger"
             title="Return to Dashboard"
           />
         </span>
