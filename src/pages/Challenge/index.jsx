@@ -23,6 +23,7 @@ const Challenge = (challengeData) => {
     async function fetchData() {
       try {
         const response = await getChallenge(pid);
+        if (!response) throw new Error('Challenge not found')
         setChallenge(response);
       } catch (error) {
         console.log('El error es: ', error);
