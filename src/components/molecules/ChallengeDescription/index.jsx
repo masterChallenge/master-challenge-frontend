@@ -1,4 +1,3 @@
-import Button from "../../atoms/Button/";
 import React from "react";
 import { useHistory } from "react-router";
 import Icon from "../../atoms/Icon";

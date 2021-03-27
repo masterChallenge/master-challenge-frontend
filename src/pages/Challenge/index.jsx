@@ -21,7 +21,7 @@ const Challenge = (challengeData) => {
 
   useEffect(() => {
     async function fetchData() {
-      try {
+      try {        
         const response = await getChallenge(pid);
         if (!response) throw new Error('Challenge not found')
         setChallenge(response);
@@ -31,7 +31,8 @@ const Challenge = (challengeData) => {
       }
     }
     fetchData();
-  }, []);
+  }, [pid,history]);
+
 
   function handleUserSubmit() {
     setResponse(validate(userInput, challenge.challenge.validatorRules));
