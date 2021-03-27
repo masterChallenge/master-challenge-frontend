@@ -1,4 +1,3 @@
-import Button from "../../atoms/Button/";
 import { useState } from "react";
 import Icon from "../../atoms/Icon";
 
@@ -17,8 +16,10 @@ const ChallengeTips = ({ hints }) => {
           : "If you have problems, the bulb will show you the way. Click it"}
       </div>
       <div className="flex justify-between items-center">
+        {/* Here I added rel attribute by security reasons:
+        link for more information: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md */}
         {currentHint ? (
-          <a href={currentHint.url} className="font-bold" target="_blank">
+          <a rel='noreferrer' href={currentHint.url} className="font-bold" target="_blank">
             Learn more...
           </a>
         ) : (

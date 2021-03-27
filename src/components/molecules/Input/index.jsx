@@ -6,10 +6,10 @@ import { css_beautify } from "js-beautify";
 export default function Input({ challenge, state }) {
   const editorRef = useRef(null);
   const { userInput: cssInputTest, setUserInput: setCssInputTest } = state;
-
+  // Adding challenge dependency
   useEffect(() => {
     setCssInputTest(css_beautify(challenge.editor_data[1].value.trim()));
-  }, []);
+  }, [challenge, setCssInputTest]);
 
   function handleEditorDidMount(editor, monaco) {
     editorRef.current = editor;
